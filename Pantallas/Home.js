@@ -54,8 +54,8 @@ class Home extends React.Component {
                   <View style={styles.separator} />
                   <View style={styles.linkContainer}>
                     <Button
-                        title="Tareas"
-                        onPress={() => navigate('Tareas', {name: 'Jane'})}
+                        title="FlexBox"
+                        onPress={() => navigate('Flex')}
                     />
                   </View>
                 </View>

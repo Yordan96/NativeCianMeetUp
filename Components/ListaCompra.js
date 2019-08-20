@@ -27,7 +27,7 @@ class ListaCompra extends React.Component {
   render() {
     return (
 
-      <View>
+      <View style={styles.container}>
         <Text style={styles.text}>Tareas pendientes</Text>
         <TodoList items={this.state.items} />
           <Text>
@@ -53,10 +53,10 @@ class ListaCompra extends React.Component {
 class TodoList extends React.Component {
   render() {
     return (
-        <View style={styles.container}>
+        <View style={styles.container_item}>
             <FlatList
                 data={this.props.items}
-                renderItem={({item}) => <Text style={styles.item}>{item.text}</Text>}
+                renderItem={({item}) => <Text style={styles.item}>* {item.text}</Text>}
             />
         </View>
     );
@@ -64,10 +64,13 @@ class TodoList extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container_item: {
    flex: 1,
    paddingTop: 22,
    paddingLeft: 10
+  },
+  container: {
+    paddingHorizontal:20
   },
   item: {
     padding: 10,
