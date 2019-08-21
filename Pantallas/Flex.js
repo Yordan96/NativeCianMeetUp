@@ -3,6 +3,16 @@ import {View, Image, StyleSheet} from 'react-native';
 import Colors from "react-native/Libraries/NewAppScreen/components/Colors";
 
 export default class FlexDirectionBasics extends Component {
+   static navigationOptions = {
+    title: 'Ejemplo FLexBox',
+    headerStyle: {
+      backgroundColor: '#f4511e',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+  };
   render() {
     return (
         <View>

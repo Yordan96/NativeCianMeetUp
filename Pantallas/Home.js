@@ -28,6 +28,16 @@ import Seconds from '../Components/Seconds';
 import ListaCompra from '../Components/ListaCompra';
 
 class Home extends React.Component {
+  static navigationOptions = {
+    title: 'Inicio',
+    headerStyle: {
+      backgroundColor: '#0d84f4',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+  };
   render(){
     const {navigate} = this.props.navigation;
 
@@ -48,7 +58,7 @@ class Home extends React.Component {
                   <View style={styles.linkContainer}>
                     <Button
                         title="Tareas"
-                        onPress={() => navigate('Tareas', {name: 'Jane'})}
+                        onPress={() => navigate('Tareas', {title: 'Ejemplo Tareas'})}
                     />
                   </View>
                   <View style={styles.separator} />
